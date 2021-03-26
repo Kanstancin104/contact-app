@@ -1,23 +1,16 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Contact from './Components/Contact'
+
+
 
 function App() {
+  const [name, setName] = useState('Kastus Vienhura')
+  const [status, setStatus] = useState('Online')
+  const [avatar, setAvatar] = useState('https://belarusfeed.com/wp-content/uploads/2019/04/kastus-kalinowski.jpg')
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Contact name={name} status={status} avatar={avatar} setStatus={setStatus} />
     </div>
   );
 }
